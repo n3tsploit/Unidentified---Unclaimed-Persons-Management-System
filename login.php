@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="loginbox" class="avatar">
-		<img src="images/6.png" class="avatar">
+		<img src="images/avatar.png" class="avatar">
 		<h1>Login</h1>
 		<form method="post" action="./include/login.inc.php">
 			<label for="police_station">Username</label><br>

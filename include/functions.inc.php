@@ -12,7 +12,7 @@ function emptyRegisterFields($police_station, $county, $passwd, $confirm_passwor
 }
 
 function invalidUser($conn, $police_station){
-	$sql = "SELECT * FROM users WHERE usersUid = ?;";
+	$sql = "SELECT * FROM users WHERE username = ?;";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
 		header("location: ../register.php?error=preparedstatementfailed");
@@ -38,7 +38,7 @@ function invalidUser($conn, $police_station){
 }
 
 function createUser($conn, $police_station, $county, $passwd){
-	$sql = "INSERT INTO users (usersUid, usersCounty, usersPwd) VALUES (?, ?, ?);";
+	$sql = "INSERT INTO users (username, usersCounty, usersPwd) VALUES (?, ?, ?);";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
 		header("location: ../register.php?error=stmtfailed");
@@ -86,7 +86,7 @@ function login($conn, $police_station, $passwd){
 	elseif ($checkPasswd === true) {
 		session_start();
 		$_SESSION['userId'] = $invalidUser['usersId'];
-		$_SESSION['userUid'] = $invalidUser['usersUid'];
+		$_SESSION['username'] = $invalidUser['username'];
 		header('location: ../dashboard.php');
 		exit();
 	}
