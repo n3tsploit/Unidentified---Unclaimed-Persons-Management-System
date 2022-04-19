@@ -1,88 +1,40 @@
-@import 'newcase.css';
-@import 'cases.css';
-* {
-	box-sizing: border-box;
-	margin: 0;
-}
-
-body{
-	font-family: 'arvo', sans-serif;
-	background: ghostwhite;
-}
-
-.sidemenu{
-	background: #11294c;
-	width: 280px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-}
-
-nav{
-	padding-top: 100px;
-}
-.sidemenu nav a{
-	display: block;
-	color: white;
-	text-decoration: none;
-	padding: 15px 30px;
-	font-weight: 300;
-	transition: all 0.3s ease-in-out;
-}
-
-.sidemenu nav a:active{
-	background: black;
-	border-left: 5px solid lightgreen;
-	padding: 15px 30px 15px 25px ;
-
-}
-
-.sidemenu nav a:hover{
-	background: mediumpurple;
-	border-left: 5px solid lightgreen;
-	padding: 15px 30px 15px 25px ;
-	color: greenyellow;
-
-}
-
-i{
-	color: greenbar;
-	font-size: 1.4rem;
-	margin-right: 0.8rem;
-	display: inline-block;
-	width: 30px ;
-	position: relative;
-	top: 2px;
-	vertical-align: bottom;
-}
-
-i:active{
-	color: green;
-	background: black;
-}
-
-i:hover{
-	color: greenyellow;
-}
-
-header{
-	margin-left: 280px;
-	padding: 15px;
-	color: black;
-	background: white;
-	padding-right: 0px;
-}
-
-.usernames{
-	display: inline-block;
-}
-
-.welcome{
-	display: inline-block;
-	float: right;
-}
-
 .content{
-	
+  color: black;
+  overflow-y:auto;
 }
 
+
+.table-container {
+  height: 670px;
+  width: 100%;
+  overflow: auto;
+ }
+ 
+ .table-container table {
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  display: block;
+ }
+
+img{
+	height: 60px;
+
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+
+	position: sticky;
+    background: #ddd;
+    top: 0;
+}
+
+tr:nth-child(even){background-color: #eee}
+tr:hover {background-color: #ddd;}

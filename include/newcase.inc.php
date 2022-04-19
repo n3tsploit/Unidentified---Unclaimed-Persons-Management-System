@@ -50,7 +50,7 @@ if (isset($_POST['upload'])) {
 
 					move_uploaded_file($fileTempName, $photoPath);
 
-					header('Location: ../cases.php');
+					header('Location: ../dashboard.php');
 
 				}
 

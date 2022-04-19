@@ -1,0 +1,91 @@
+@import 'newcase.css';
+@import 'dashboard.css';
+@import 'register.css';
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body{
+	font-family: Arial, Helvetica, sans-seriff;
+	background: #f2f2f2;
+}
+
+.sidemenu{
+	background: #11294c;
+	width: 280px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+nav{
+	padding-top: 100px;
+}
+.sidemenu nav a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 15px 30px;
+	font-weight: 300;
+	transition: all 0.3s ease-in-out;
+}
+
+.sidemenu nav a:active{
+	background: black;
+	border-left: 5px solid lightgreen;
+	padding: 15px 30px 15px 25px ;
+
+}
+
+.sidemenu nav a:hover{
+	background: mediumpurple;
+	border-left: 5px solid lightgreen;
+	padding: 15px 30px 15px 25px ;
+	color: greenyellow;
+
+}
+
+i{
+	color: greenbar;
+	font-size: 1.4rem;
+	margin-right: 0.8rem;
+	display: inline-block;
+	width: 30px ;
+	position: relative;
+	top: 2px;
+	vertical-align: bottom;
+}
+
+i:active{
+	color: green;
+	background: black;
+}
+
+i:hover{
+	color: greenyellow;
+}
+
+header{
+	margin-left: 280px;
+	padding: 15px;
+	color: black;
+	background: white;
+	padding-right: 0px;
+}
+
+.usernames{
+	display: inline-block;
+}
+
+.welcome{
+	display: inline-block;
+	float: right;
+}
+
+.body{
+	margin-left: 280px;
+	padding: 15px;
+	color: black;
+}
+
