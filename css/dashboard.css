@@ -3,6 +3,10 @@
   overflow-y:auto;
 }
 
+.table-images{
+  height: 90px;
+  width: 100px;
+}
 
 .table-container {
   height: 670px;

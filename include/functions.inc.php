@@ -15,7 +15,7 @@ function invalidUser($conn, $police_station){
 	$sql = "SELECT * FROM users WHERE username = ?;";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		header("location: ../register.php?error=preparedstatementfailed");
+		header("location: ../user/register.php?error=preparedstatementfailed");
 		exit();
 	}
 
@@ -41,7 +41,7 @@ function createUser($conn, $police_station, $county, $passwd){
 	$sql = "INSERT INTO users (username, usersCounty, usersPwd) VALUES (?, ?, ?);";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		header("location: ../register.php?error=stmtfailed");
+		header("location: ../user/register.php?error=stmtfailed");
 		exit();
 	}
 
@@ -51,7 +51,7 @@ function createUser($conn, $police_station, $county, $passwd){
 	mysqli_stmt_execute($stmt);
 	mysqli_stmt_close($stmt);
 
-	header("location: ../register.php?error=none");
+	header("location: ../user/register.php?error=none");
 		exit();
 
 }
@@ -87,7 +87,7 @@ function login($conn, $police_station, $passwd){
 		session_start();
 		$_SESSION['userId'] = $invalidUser['usersId'];
 		$_SESSION['username'] = $invalidUser['username'];
-		header('location: ../dashboard.php');
+		header('location: ../user/dashboard.php');
 		exit();
 	}
 

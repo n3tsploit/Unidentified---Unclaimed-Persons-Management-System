@@ -2,7 +2,7 @@
 	include_once 'header.php';
 ?>
 	<div class="container">
-		<form  method="post" action="./include/register.inc.php">
+		<form  method="post" action="../include/register.inc.php">
 			<h1>Register User</h1>
 			<hr>
 			<div class="register-form">

@@ -36,7 +36,7 @@ if (isset($_POST['upload'])) {
 			include_once 'database.inc.php';
 
 			if (empty($name) || empty($gender) || empty($race) || empty($obNumber) || empty($age) || empty($state) || empty($dateFound) || empty($county) || empty($constituency) || empty($description) || empty($narrative) || empty($file)) {
-				header('Location: ../newcase.php?upload=empty');
+				header('Location: ../user/newcase.php?upload=empty');
 				exit();
 			}else{
 				$sql = 'INSERT INTO cases (name, gender, race, age, obNumber, state, dateFound, county, constituency, description, narrative, photo, usersId) VALUES (?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?);';
@@ -50,7 +50,7 @@ if (isset($_POST['upload'])) {
 
 					move_uploaded_file($fileTempName, $photoPath);
 
-					header('Location: ../dashboard.php');
+					header('Location: ../user/dashboard.php');
 
 				}
 

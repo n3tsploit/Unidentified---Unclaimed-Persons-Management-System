@@ -21,7 +21,7 @@
 				    
 				    	<?php
 
-						include_once 'include/database.inc.php';
+						include_once '../include/database.inc.php';
 
 						$sql = 'SELECT * FROM cases ORDER BY caseId DESC;';
 						$stmt = mysqli_stmt_init($conn);
@@ -33,7 +33,7 @@
 
 							while ($row = mysqli_fetch_assoc($result)) {
 								echo "<tr>";
-								echo "<td><img src='images/cases/".$row['photo'] ."' class='table-images'></td>";
+								echo "<td><img src='../images/cases/".$row['photo'] ."' class='table-images'></td>";
 								echo '<td>'.$row['caseId'].'</td>';
 								echo '<td>'.$row['obNumber'].'</td>';
 								echo '<td>'.$row['name'].'</td>';

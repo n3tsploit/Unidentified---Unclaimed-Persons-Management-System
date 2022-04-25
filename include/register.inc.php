@@ -10,15 +10,15 @@ if (isset($_POST['submit'])){
 	require_once 'functions.inc.php';
 
 	if (emptyRegisterFields($police_station, $county, $passwd, $confirm_password)!== false) {
-		header("location: ../register.php?error=fieldsareempty");
+		header("location: ../user/register.php?error=fieldsareempty");
 		exit();
 	}
 	if (wrongPassword( $passwd, $confirm_password)!== false) {
-		header("location: ../register.php?error=password don't match");
+		header("location: ../user/register.php?error=password don't match");
 		exit();
 	}
 	if (invalidUser($conn, $police_station)!== false) {
-		header("location: ../register.php?error=Userexists");
+		header("location: ../user/register.php?error=Userexists");
 		exit();
 	}
 
@@ -26,6 +26,6 @@ if (isset($_POST['submit'])){
 
 }
 else{
-	header("location: ../register.php");
+	header("location: ../user/register.php");
 	exit();
 }

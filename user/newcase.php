@@ -2,7 +2,7 @@
 	include_once 'header.php';
 ?>
 		<div class="upload">
-			<form action="include/newcase.inc.php" method="post" enctype="multipart/form-data">
+			<form action="../include/newcase.inc.php" method="post" enctype="multipart/form-data">
 				<h1>Enter New Case</h1>
 				<hr>
 				<div class="form">

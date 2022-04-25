@@ -3,7 +3,7 @@
 	$username = $_SESSION['username'];
 
 	if (!isset($_SESSION['username'])) {
-		header('location: login.php');
+		header('location: ../login.php');
 	}
 ?>
 
@@ -13,7 +13,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" type="text/css" href="./css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
 	<title>UUPMS</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
 			<a href="dashboard.php"><i class="material-icons">dashboard</i>Dashboard</a>
 			<a href="newcase.php"><i class="material-icons">add_circle_outline</i>New Case</a>
 			<a href="register.php"><i class="material-icons">person_add</i>Register User</a>
-			<a href="include/logout.inc.php"><i class="material-icons">exit_to_app</i>Log Out</a>
+			<a href="../include/logout.inc.php"><i class="material-icons">exit_to_app</i>Log Out</a>
 		</nav>
 	</section>
 
