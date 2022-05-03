@@ -10,11 +10,24 @@
 						<label>Name</label>
 						<input type="text" name="name">
 						<label>Gender</label>
-						<input type="text" name="gender">
+						<select name="gender">
+							<option selected>Choose Gender</option>
+							<option value="Male">Male</option>
+							<option value="Female">Asian</option>
+							<option value="Transgender">Transgender</option>							
+						</select>
 						<label>Race</label>
-						<input type="text" name="race">
+						<select name="race">
+							<option selected>Choose Race</option>
+							<option value="American Indian">American Indian or Alaska Native</option>
+							<option value="Asian">Asian</option>
+							<option value=" Black">Black or African American</option>
+							<option value="Native Hawaiian">Native Hawaiian or Other Pacific Islander</option>
+							<option value="White">White</option>							
+						</select>
 						<label>County</label>
 						<select id="county" name="county">
+							<option selected>Choose County</option>
 							<option value="Mombasa County">Mombasa County</option>
 							<option value="Kwale County">Kwale County</option>
 							<option value="Kilifi County">Kilifi County</option>
@@ -69,12 +82,25 @@
 						<textarea name="description" rows="10" cols="50" placeholder="Enter description of the person..."></textarea><br>
 					</div>
 					<div class="right">
-						<label>Age</label>
-						<input type="number" name="age"><br>
 						<label>OB Number</label>
 						<input type="text" name="obNumber"><br>
+						<label>Estimate Age</label>
+						<select name="age">
+							<option selected>Choose Age Range</option>
+							<option value="0-10">0-10</option>
+							<option value="11-15">11-15</option>
+							<option value="15-18">15-18</option>
+							<option value="19-25">19-25</option>
+							<option value="above 25">above 25</option>
+							
+						</select> <br>
 						<label>State</label>
-						<input type="text" name="state"><br>
+						<select id="state" name="state">
+							<option selected>Choose Gender</option>
+							<option value="unidentified">Unidentified</option>
+							<option value="unclaimed">Unclaimed</option>
+						</select>
+						<br>
 						<label>Date Found</label>
 						<input type="date" name="dateFound" id="date"><br>
 						<label>Photo</label>

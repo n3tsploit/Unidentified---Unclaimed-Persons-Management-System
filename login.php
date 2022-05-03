@@ -7,6 +7,17 @@
 	<link rel="stylesheet" type="text/css" href="./css/login.css">
 </head>
 <body>
+	<div class="navbar">
+		<img src="images/logos/8.png" class="logo">
+		<ul>
+			<li><a href="./index.php">Home</a></li>
+			<li><a href="./unidentified.php">Unidentified</a></li>
+			<li><a href="#">Unclaimed</a></li>
+			<li><a href="#">Feedback</a></li>
+			<li><a href="./login.php">LOG IN</a></li>
+		</ul>
+			
+	</div>
 	<div class="loginbox" class="avatar">
 		<img src="images/8.png" class="avatar">
 		<h1>Login</h1>

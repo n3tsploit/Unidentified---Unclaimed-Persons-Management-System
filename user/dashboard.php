@@ -15,15 +15,18 @@
 				      <th>Date Found</th>
 				      <th>County</th>
 				      <th>Contituency</th>
-				      <th>Info</th>
-				      <th>action</th>
+				      <th>Infomation</th>
+				      <th>Action</th>
 				    </tr>
 				    
 				    	<?php
 
 						include_once '../include/database.inc.php';
-
-						$sql = 'SELECT * FROM cases ORDER BY caseId DESC;';
+						if ($role==='admin') {
+							$sql = "SELECT * FROM cases ORDER BY caseId DESC";
+						}else{
+							$sql = "SELECT * FROM cases WHERE usersId='$userId' ORDER BY caseId DESC";
+							}
 						$stmt = mysqli_stmt_init($conn);
 						if (!mysqli_stmt_prepare($stmt,$sql)) {
 							echo "SQL error";
@@ -43,7 +46,7 @@
 								echo '<td>'.$row['county'].'</td>';
 								echo '<td>'.$row['constituency'].'</td>';
 								echo '<td>More info</td>';
-								echo '<td>Delete Record</td>';
+								echo '<td><form action="../include/delete.inc.php" method="post" ><form><button class="delete-button" type="submit" name="submit" value="'.$row['caseId'].'" />Delete</button></td>';
 								echo "</tr>";
 							}
 						}
@@ -52,7 +55,7 @@
 						?>
 				    
 			  </table>
-
+			 
 			
 
 			</div>

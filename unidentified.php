@@ -17,7 +17,7 @@
 			<img src="images/logos/8.png" class="logo">
 			<ul>
 				<li><a href="./index.php">Home</a></li>
-				<li><a href="#">Unidentified</a></li>
+				<li><a href="./unidentified.php">Unidentified</a></li>
 				<li><a href="#">Unclaimed</a></li>
 				<li><a href="#">Feedback</a></li>
 				<li><a href="./login.php">Log In</a></li>
@@ -34,7 +34,7 @@
 				<select name="gender">
 					<option value="male">Male</option>
 					<option value="female">Female</option>
-					<option value="bi-sexual">Bi-sexual</option>
+					<option value="Transgender">Transgender</option>
 				</select>
 				<button type="submit" name="submit-search">Search</button>
 			</form>

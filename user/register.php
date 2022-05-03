@@ -10,6 +10,7 @@
 				<input class="register-input" type="text" id="police_station" name="police_station" placeholder="Police Station name">  
 				<label class="register-label" for="county">County</label>
 				<select class="register-select" id="county" name="county">
+					<option selected>Select County</option>
 					<option value="Mombasa County">Mombasa County</option>
 					<option value="Kwale County">Kwale County</option>
 					<option value="Kilifi County">Kilifi County</option>
@@ -58,10 +59,16 @@
 					<option value="Nyamira County">Nyamira County</option>
 					<option value="Nairobi County">Nairobi County</option>
 				</select>
+				<label class="register-label" for="county">Role</label>
+				<select class="register-select" id="role" name="role">
+					<option selected>Select Role</option>
+					<option value="user">User</option>
+					<option value="admin">Admin</option>
+				</select>
 				<label class="register-label" for="password">Password</label>
 				<input class="register-input" type="password" name="password" placeholder="password"> 
 				<label class="register-label" for="confirm_password">Confirm password</label>
-				<input class="register-input" type="password" name="confirm_password" placeholder="confirm password">
+				<input class="register-input" type="password" name="confirm_password" placeholder="re-enter password">
 				<button class="register-button"type="submit" name='submit'>Register</button>
 				
 			</div>		

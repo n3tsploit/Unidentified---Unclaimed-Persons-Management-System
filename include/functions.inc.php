@@ -37,8 +37,8 @@ function invalidUser($conn, $police_station){
 
 }
 
-function createUser($conn, $police_station, $county, $passwd){
-	$sql = "INSERT INTO users (username, usersCounty, usersPwd) VALUES (?, ?, ?);";
+function createUser($conn, $police_station, $county, $passwd, $role){
+	$sql = "INSERT INTO users (username, usersCounty, usersPwd, role) VALUES (?, ?, ?, ?);";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
 		header("location: ../user/register.php?error=stmtfailed");
@@ -47,7 +47,7 @@ function createUser($conn, $police_station, $county, $passwd){
 
 	$hashedPwd = password_hash($passwd, PASSWORD_DEFAULT);
 
-	mysqli_stmt_bind_param($stmt, "sss", $police_station, $county, $hashedPwd);
+	mysqli_stmt_bind_param($stmt, "ssss", $police_station, $county, $hashedPwd, $role);
 	mysqli_stmt_execute($stmt);
 	mysqli_stmt_close($stmt);
 
@@ -87,6 +87,7 @@ function login($conn, $police_station, $passwd){
 		session_start();
 		$_SESSION['userId'] = $invalidUser['usersId'];
 		$_SESSION['username'] = $invalidUser['username'];
+		$_SESSION['role'] = $invalidUser['role'];
 		header('location: ../user/dashboard.php');
 		exit();
 	}

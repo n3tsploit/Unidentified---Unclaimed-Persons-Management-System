@@ -3,13 +3,14 @@
 if (isset($_POST['submit'])){
 	$police_station = $_POST['police_station'];
 	$county = $_POST['county'];
+	$role = $_POST['role'];
 	$passwd = $_POST['password'];
 	$confirm_password = $_POST['confirm_password'];
 
 	require_once 'database.inc.php';
 	require_once 'functions.inc.php';
 
-	if (emptyRegisterFields($police_station, $county, $passwd, $confirm_password)!== false) {
+	if (emptyRegisterFields($police_station, $county, $passwd, $confirm_password, $role)!== false) {
 		header("location: ../user/register.php?error=fieldsareempty");
 		exit();
 	}
@@ -22,7 +23,7 @@ if (isset($_POST['submit'])){
 		exit();
 	}
 
-	createUser($conn, $police_station, $county, $passwd);
+	createUser($conn, $police_station, $county, $passwd, $role);
 
 }
 else{

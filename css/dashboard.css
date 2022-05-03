@@ -30,7 +30,7 @@ img{
 
 th, td {
   text-align: left;
-  padding: 8px;
+  padding: 10px;
 }
 
 th{
@@ -42,3 +42,20 @@ th{
 
 tr:nth-child(even){background-color: #eee}
 tr:hover {background-color: #ddd;}
+
+.delete-button{
+  position: left;
+  margin-left: 50%;
+  margin-top: 5%;
+  background: #11294c;
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  height: 18px;
+  border-radius: 45px;
+  width: 50px;
+  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+  display: block;
+  font-family: inherit;
+  font-size: 12px;
+}
