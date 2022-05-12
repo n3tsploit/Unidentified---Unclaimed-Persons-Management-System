@@ -65,12 +65,25 @@
 								<hr style="border-top: 3px dashed darkgray;"><br>
 								<h3>Details :</h3>
 								<p>'.$row["narrative"].'</p>
-							</div>
+							</div><br><hr style="border-top: 3px dashed darkgray;"><br>
 						</a>';
 					}
 				}
 				
 				?>
+				<div class="feedback">
+					<form action="include/feedback.inc.php" method="post"><br>
+						<h3>Feedback</h3><br>					
+						<input type="text" name="name" placeholder="Enter your name here....">
+						<input type="text" name="email" placeholder="Enter your email here....">
+						<textarea name="message" rows="10" cols="50" placeholder="Enter your message here...."></textarea><br>
+						<?php 
+						echo '<input type="caseId" name="caseId" hidden value="'.$id.'">';
+
+						 ?>
+						<button type="submit" name="submit" class="feedback-button">Submit</button>
+					</form>
+				</div>
 		</div>
 	</div>
 </body>

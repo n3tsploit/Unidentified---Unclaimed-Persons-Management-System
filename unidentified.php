@@ -32,8 +32,8 @@
 			<hr>
 			<form action="search.php" method="POST">
 				<select name="gender">
-					<option value="male">Male</option>
-					<option value="female">Female</option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
 					<option value="Transgender">Transgender</option>
 				</select>
 				<button type="submit" name="submit-search">Search</button>

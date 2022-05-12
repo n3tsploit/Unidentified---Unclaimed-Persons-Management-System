@@ -23,6 +23,7 @@
 		<nav>
 			<a href="dashboard.php"><i class="material-icons">dashboard</i>Dashboard</a>
 			<a href="newcase.php"><i class="material-icons">add_circle_outline</i>New Case</a>
+			<a href="newcase.php"><i class="material-icons">feedback</i>Feedback</a>
 			<?php
 				if ($role === 'admin') {
 					echo '<a href="register.php"><i class="material-icons">person_add</i>Register User</a>';
