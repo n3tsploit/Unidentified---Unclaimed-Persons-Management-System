@@ -5,7 +5,7 @@
 }
 
 body{
-	background: #16365e;
+	background: #1d3e5f;
 }
 
 .loginbox{
@@ -65,7 +65,7 @@ button{
 	border: none;
 	outline: none;
 	height: 40px;
-	background: #16365e;
+	background: #1d79cc;
 	color: white;
 	font-size: 18px;
 	border-radius: 20px;
@@ -74,8 +74,8 @@ button{
 
 button:hover{
 	cursor: pointer;
-	background: indianred;
-	color: #000;
+	background: #16365e;
+	color: #ffffff;
 }
 
 
@@ -87,7 +87,7 @@ button:hover{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #16365e ;
+	background-color: #1d3e5f ;
 }
 /*#0E0B16  #DFDCE3*/
 
@@ -123,4 +123,16 @@ button:hover{
 
 .navbar ul li:hover:after{
 	width: 100%;
+}
+
+.success{
+	color: black;
+	padding: 5px 20px;
+	background: #68ca48;
+}
+
+.error{
+	color: black;
+	padding: 5px 20px;
+	background: #c71c13;
 }

@@ -6,10 +6,10 @@ if (isset($_POST['submit'])) {
 
 	$sql = "DELETE FROM cases WHERE caseId='$remove'";
 	if (mysqli_query($conn,$sql)) {
-		header("location: ../user/dashboard.php?message=success");
+		header("location: ../user/dashboard.php?message=deleted");
 		exit();
 	}else{
-		header("location: ../user/dashboard.php?message=error");
+		header("location: ../user/dashboard.php?error=An error has occured, try again!");
 		exit();
 	}
 }

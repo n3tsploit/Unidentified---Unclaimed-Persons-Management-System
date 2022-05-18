@@ -24,10 +24,14 @@
 			</ul>
 			
 		</div>
+		<?php
+			include_once './errorhandler.php';
+
+		?>
 		<div class="unidentified-content">
 			<div class="top-text">
 				<h1>MORE DETAILS</h1>
-				<p>Below are more details obout the case.</p>
+				<p>Below are more details about the case.</p>
 			</div>
 			<hr>
 			<div class="cases-container">
@@ -42,7 +46,10 @@
 					mysqli_stmt_execute($stmt);
 					$result=mysqli_stmt_get_result($stmt);
 
+
 					while ($row = mysqli_fetch_assoc($result)) {
+						$number=$row["obNumber"];
+						$userId=$row["usersId"];
 						echo '<a>
 							<div style="background-image: url(images/cases/'.$row["photo"].')"></div>
 			</div>
@@ -72,13 +79,16 @@
 				
 				?>
 				<div class="feedback">
-					<form action="include/feedback.inc.php" method="post"><br>
+					<form action="include/feedback.inc.php" method="post">
 						<h3>Feedback</h3><br>					
 						<input type="text" name="name" placeholder="Enter your name here....">
-						<input type="text" name="email" placeholder="Enter your email here....">
+						<input type="email" name="email" placeholder="Enter your email here....">
 						<textarea name="message" rows="10" cols="50" placeholder="Enter your message here...."></textarea><br>
+						<input type="tel" name="contact" placeholder="Enter your Phone number here.... 0700-000-000"  pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
 						<?php 
 						echo '<input type="caseId" name="caseId" hidden value="'.$id.'">';
+						echo '<input type="caseId" name="obNumber" hidden value="'.$number.'">';
+						echo '<input type="caseId" name="userId" hidden value="'.$userId.'">';
 
 						 ?>
 						<button type="submit" name="submit" class="feedback-button">Submit</button>

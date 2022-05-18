@@ -8,12 +8,12 @@
 				<div class="form">
 					<div class="left">
 						<label>Name</label>
-						<input type="text" name="name">
+						<input type="text" name="name" placeholder="Enter name of victim...">
 						<label>Gender</label>
 						<select name="gender">
 							<option selected>Choose Gender</option>
 							<option value="Male">Male</option>
-							<option value="Female">Asian</option>
+							<option value="Female">Female</option>
 							<option value="Transgender">Transgender</option>							
 						</select>
 						<label>Race</label>
@@ -83,7 +83,7 @@
 					</div>
 					<div class="right">
 						<label>OB Number</label>
-						<input type="text" name="obNumber"><br>
+						<input type="text" name="obNumber" placeholder="OB-00-00-00"><br>
 						<label>Estimate Age</label>
 						<select name="age">
 							<option selected>Choose Age Range</option>
@@ -96,7 +96,7 @@
 						</select> <br>
 						<label>State</label>
 						<select id="state" name="state">
-							<option selected>Choose Gender</option>
+							<option selected>Choose State</option>
 							<option value="unidentified">Unidentified</option>
 							<option value="unclaimed">Unclaimed</option>
 						</select>

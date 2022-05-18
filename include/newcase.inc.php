@@ -28,6 +28,12 @@ if (isset($_POST['upload'])) {
 
 	$allow = array('jpg','jpeg','png');
 
+	if (($state==='unidentified')&& ($gender==='Male')) {
+		$name='John Doe';
+	}elseif (($state==='unidentified') && ($gender!='male')) {
+		$name='Jane Doe';
+	}
+
 	if (in_array($fileRealExt, $allow)) {
 		if ($fileError === 0) {
 			$photoName = $username .'.' . uniqid('',true) . '.' . $fileRealExt;
@@ -36,7 +42,7 @@ if (isset($_POST['upload'])) {
 			include_once 'database.inc.php';
 
 			if (empty($name) || empty($gender) || empty($race) || empty($obNumber) || empty($age) || empty($state) || empty($dateFound) || empty($county) || empty($constituency) || empty($description) || empty($narrative) || empty($file)) {
-				header('Location: ../user/newcase.php?upload=empty');
+				header('Location: ../user/newcase.php?error=Fill all fields');
 				exit();
 			}else{
 				$sql = 'INSERT INTO cases (name, gender, race, age, obNumber, state, dateFound, county, constituency, description, narrative, photo, usersId) VALUES (?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?);';
@@ -50,17 +56,17 @@ if (isset($_POST['upload'])) {
 
 					move_uploaded_file($fileTempName, $photoPath);
 
-					header('Location: ../user/dashboard.php');
+					header('Location: ../user/dashboard.php?message=added a new case');
 
 				}
 
 			}
 		}else{
-			echo "An error occured";
+			header('Location: ../user/newcase.php?error=An error has occured, try again');
 			exit();
 		}
 	}else{
-		echo "check file type";
+		header('Location: ../user/newcase.php?error=Incorrect file type!');
 		exit();
 	}
 }

@@ -15,7 +15,7 @@
 				      <th>Date Found</th>
 				      <th>County</th>
 				      <th>Contituency</th>
-				      <th>Infomation</th>
+				     <!-- <th>Edit</th> -->
 				      <th>Action</th>
 				    </tr>
 				    
@@ -45,7 +45,7 @@
 								echo '<td>'.$row['dateFound'].'</td>';
 								echo '<td>'.$row['county'].'</td>';
 								echo '<td>'.$row['constituency'].'</td>';
-								echo '<td>More info</td>';
+								/*echo '<td><form action="./edituser.php" method="post" ><form><button class="delete-button" type="submit" name="edit" value="'.$row['caseId'].'" />Edit</button></td>';*/
 								echo '<td><form action="../include/delete.inc.php" method="post" ><form><button class="delete-button" type="submit" name="submit" value="'.$row['caseId'].'" />Delete</button></td>';
 								echo "</tr>";
 							}

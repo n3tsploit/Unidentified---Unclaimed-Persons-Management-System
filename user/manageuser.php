@@ -10,7 +10,7 @@
 				      <th>Username </th>
 				      <th>County</th>
 				      <th>Role</th>
-				      <th>Action</th>
+				      <th>Delete</th>
 				    </tr>
 				    
 				    	<?php

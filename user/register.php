@@ -7,8 +7,8 @@
 			<hr>
 			<div class="register-form">
 				<label class="register-label" for="police_station">Username</label>
-				<input class="register-input" type="text" id="police_station" name="police_station" placeholder="Police Station name">  
-				<label class="register-label" for="county">County</label>
+				<input class="register-input" type="text" id="police_station" name="police_station" placeholder="Use police Station name ...">  
+				<label class="register-label" for="county">County Located</label>
 				<select class="register-select" id="county" name="county">
 					<option selected>Select County</option>
 					<option value="Mombasa County">Mombasa County</option>
@@ -65,10 +65,10 @@
 					<option value="user">User</option>
 					<option value="admin">Admin</option>
 				</select>
-				<label class="register-label" for="password">Password</label>
-				<input class="register-input" type="password" name="password" placeholder="password"> 
+				<label class="register-label" for="password" >Password</label>
+				<input class="register-input" type="password" name="password" placeholder="Enter password..."> 
 				<label class="register-label" for="confirm_password">Confirm password</label>
-				<input class="register-input" type="password" name="confirm_password" placeholder="re-enter password">
+				<input class="register-input" type="password" name="confirm_password" placeholder="Enter password again...">
 				<button class="register-button"type="submit" name='submit'>Register</button>
 				
 			</div>		

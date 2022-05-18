@@ -15,7 +15,7 @@ function invalidUser($conn, $police_station){
 	$sql = "SELECT * FROM users WHERE username = ?;";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		header("location: ../user/register.php?error=preparedstatementfailed");
+		header("location: ../user/register.php?error=prepared statement failed");
 		exit();
 	}
 
@@ -41,7 +41,7 @@ function createUser($conn, $police_station, $county, $passwd, $role){
 	$sql = "INSERT INTO users (username, usersCounty, usersPwd, role) VALUES (?, ?, ?, ?);";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
-		header("location: ../user/register.php?error=stmtfailed");
+		header("location: ../user/register.php?error=stmt failed");
 		exit();
 	}
 
@@ -51,7 +51,7 @@ function createUser($conn, $police_station, $county, $passwd, $role){
 	mysqli_stmt_execute($stmt);
 	mysqli_stmt_close($stmt);
 
-	header("location: ../user/register.php?error=none");
+	header("location: ../user/register.php?message=created a new user");
 		exit();
 
 }
@@ -72,7 +72,7 @@ function login($conn, $police_station, $passwd){
 	$invalidUser = invalidUser($conn, $police_station);
 
 	if ($invalidUser === false){
-		header("location: ../login.php?error=wrongcredential");
+		header("location: ../login.php?error=wrong credentials");
 		exit();
 	}
 
@@ -80,7 +80,7 @@ function login($conn, $police_station, $passwd){
 	$checkPasswd = password_verify($passwd, $hashedPasswd);
 
 	if ($checkPasswd === false) {
-		header('location: ../login.php?error=wrongcredential');
+		header('location: ../login.php?error=wrong credentials');
 		exit();
 	}
 	elseif ($checkPasswd === true) {
@@ -104,4 +104,20 @@ function emptyLoginFields($police_station,  $passwd){
 	}
 
 	return $result;
+}
+
+function invalidPass($passwd){
+	if (strlen($passwd) <= '8') {
+		header("location: ../user/register.php?error=Your Password Should have At Least 8 Characters!");
+		exit();
+    }elseif(!preg_match("#[0-9]+#",$passwd)) {
+    	header("location: ../user/register.php?error=Your Password Should have At Least 1 Number");
+		exit();
+    }elseif(!preg_match("#[A-Z]+#",$passwd)) {
+    	header("location: ../user/register.php?error=Your Password Should have At Least 1 Capital Letter!");
+		exit();
+    }elseif(!preg_match("#[a-z]+#",$passwd)) {
+    	header("location: ../user/register.php?error=Your Password Should have At Least 1 Lowercase Letter!");
+		exit();
+    }
 }

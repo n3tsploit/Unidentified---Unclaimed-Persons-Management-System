@@ -68,6 +68,8 @@ input{
 	height: 30px;
 	border: 1px solid #ccc;
 	outline: none;
+	padding-left: 150px;
+	font-size: 15px;
 }
 
 #photo{

@@ -23,7 +23,7 @@
 		<nav>
 			<a href="dashboard.php"><i class="material-icons">dashboard</i>Dashboard</a>
 			<a href="newcase.php"><i class="material-icons">add_circle_outline</i>New Case</a>
-			<a href="newcase.php"><i class="material-icons">feedback</i>Feedback</a>
+			<a href="feedback.php"><i class="material-icons">feedback</i>Feedbacks</a>
 			<?php
 				if ($role === 'admin') {
 					echo '<a href="register.php"><i class="material-icons">person_add</i>Register User</a>';
@@ -49,5 +49,19 @@
 			<i class="material-icons" style="font-size:30px;color:black;">person_pin</i>
 		</div>
 	</header>
+	
 
 	<section class="body">
+			<?php
+		if(isset($_GET['message'])){
+			$errormessage=$_GET['message'];
+
+			echo "<p class='success'><strong>Successfully ".$errormessage."</strong></P>";	
+		
+		}elseif (isset($_GET['error'])) {
+			$errormessage=$_GET['error'];
+
+			echo "<p class='error'><strong>".$errormessage."</strong></p>";
+		}
+	?>
+	<br>

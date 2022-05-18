@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
 	require_once 'functions.inc.php';
 
 	if (emptyLoginFields($police_station, $passwd)!== false) {
-		header("location: ../login.php?error=emptyinput");
+		header("location: ../login.php?error=Fill all fields!");
 		exit();
 	}
 	

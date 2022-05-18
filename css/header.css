@@ -89,3 +89,15 @@ header{
 	color: black;
 }
 
+.success{
+	color: black;
+	padding: 5px 20px;
+	background: #68ca48;
+}
+
+.error{
+	color: black;
+	padding: 5px 20px;
+	background: #e91634;
+}
+

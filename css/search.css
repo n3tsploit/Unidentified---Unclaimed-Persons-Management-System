@@ -21,7 +21,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #CDCDCD ;
+	background-color: #1d3e5f ;
 }
 /*#0E0B16  #DFDCE3*/
 
@@ -39,7 +39,7 @@ body{
 
 .navbar ul li a{
 	text-decoration: none;
-	color: #0D0D0D;
+	color: #ffffff;
 	font-weight: bolder;
 	text-transform: uppercase;
 }
@@ -85,6 +85,7 @@ body{
 	font-size: 20px;
 	font-weight: 700px;
 	color: #111;
+	color: black;
 
 }
 
@@ -99,9 +100,15 @@ hr{
 }
 
 button{
-	width: 200;
-	height: 20px;
-	font-size: 15px;
+	background: #1d79cc;
+	color: #ffffff;
+	border: none;
+	outline: none;
+	height: 27px;
+	border-radius: 45px;
+	width: 100px;
+	font-family: inherit;
+	font-size: 16px;;
 }
 
 input{
@@ -121,8 +128,11 @@ input{
 }
 
 .feedback h3{
+	margin-top: 0px;
+	padding-top: 0px;
 	margin-left: 150px ;
 	font-size: 30px;
+	color: black;
 }
 
 .feedback-button{
@@ -140,4 +150,42 @@ input{
 	display: block;
 	font-family: inherit;
 	font-size: 16px;
+}
+
+.success{
+	color: black;
+	padding: 5px 20px;
+	background: #68ca48;
+}
+
+.error{
+	color: black;
+	padding: 5px 20px;
+	background: #c71c13;
+}
+
+a{
+	color: #111314;
+}
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { color: #1d43e9; font-weight: bolder; }
+
+
+a:active { text-decoration: none; }
+
+p{
+	color: black;
+}
+
+h3{
+	color: black;
+}
+
+.cases-container a:hover{
+	text-decoration: none;
 }
